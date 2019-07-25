@@ -12,7 +12,7 @@ setup(
     # scripts and entry points
     scripts=['scripts/foobar.py'],
     entry_points = {
-        'console_scripts': ['barentry=pyfoo.foo:main']
+        'console_scripts': ['barentry=pyfoo.cli_foo:main']
     },
     # extended metadata
     url="https://github.com/jffist/pyfoo",
