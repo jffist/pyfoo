@@ -1,0 +1,1 @@
+SELECT calendar_day,is_holiday FROM working_days
