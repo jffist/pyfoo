@@ -20,13 +20,16 @@ setup(
     entry_points = {
         'console_scripts': [
                 'barentry=pyfoo.cli_foo:main',
-                'foosql=pyfoo.cli_sql:main'
+                'foosql=pyfoo.cli_sql:main',
+                'foosnake=pyfoo.cli_snake:main'
          ]
     },
 
     # data
     package_data={'pyfoo': ['sql/*.sql']}, #dictionary of <package>: <relative path under package dir>
-
+    data_files=[
+        ('magic/resources', ['data/snake.txt']) # ('<where to put>', [<file1, file2>])
+    ],
     # extended metadata
     url="https://github.com/jffist/pyfoo",
     author="Foo Man",
