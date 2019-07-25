@@ -3,15 +3,19 @@ from setuptools import setup
 
 setup(
     name="pyfoo",
-    version="0.2.0",
+    version="0.3.1",
     license='Proprietary',
     packages=find_packages(exclude=('tests',)),
     install_requires=['numpy'],
     tests_require=['pytest','numpy.testing'],
 
-
+    # scripts and entry points
+    scripts=['scripts/foobar.py'],
+    entry_points = {
+        'console_scripts': ['barentry=pyfoo.foo:main']
+    },
     # extended metadata
-    url="https://gitlab.com/stware/pyfoo",
+    url="https://github.com/jffist/pyfoo",
     author="Foo Man",
     author_email="foo@man.com",
     description="A minimalistic example of python package",
